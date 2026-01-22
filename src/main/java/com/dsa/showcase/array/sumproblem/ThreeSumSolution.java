@@ -34,6 +34,7 @@ class ThreeSumSolution {
         List<List<Integer>> result = solution.threeSum(nums);
         System.out.println(result); // Output: [[-1,-1,2],[-1,0,1]]
     }
+    //time complexity O(n^2)
     public List<List<Integer>> threeSum(int[] nums) {
         if (nums.length == 0)
             return new ArrayList<>();
