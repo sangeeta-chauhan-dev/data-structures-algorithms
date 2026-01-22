@@ -32,6 +32,8 @@ class SortColors {
             System.out.print(num + " ");
         }
     }
+    //time complexity O(n)
+    //space complexity O(1)
     public void sortColors(int[] nums) {
         int i=0;
         int j=0;
