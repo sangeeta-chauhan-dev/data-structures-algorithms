@@ -1,5 +1,7 @@
 package com.dsa.showcase.array.kadane;
 
+import java.util.Arrays;
+
 /*53. Maximum Subarray
 Solved
         Medium
@@ -25,6 +27,8 @@ class MaxSubArray {
         int[] arr = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
         MaxSubArray maximumSubArray = new MaxSubArray();
         System.out.println(maximumSubArray.maxSubArray(arr));
+        maximumSubArray.printMaxSubArray(arr);
+
     }
 
     //algorithm Kadane's Algorithm
@@ -38,5 +42,28 @@ class MaxSubArray {
             maxSum = Math.max(maxSum, currSum);
         }
         return maxSum;
+    }
+
+    public void printMaxSubArray(int[] nums) {
+        int currSum = 0;
+        int maxSum = Integer.MIN_VALUE;
+        int start = 0, end = 0, tempStart = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > currSum + nums[i]) {
+                currSum = nums[i];
+                tempStart = i;
+            } else {
+                currSum += nums[i];
+            }
+
+            if (currSum > maxSum) {
+                maxSum = currSum;
+                start = tempStart;
+                end = i;
+            }
+        }
+       //print subarray
+        System.out.println("Maximum Subarray: " + Arrays.toString(Arrays.copyOfRange(nums, start, end + 1)));
     }
 }
