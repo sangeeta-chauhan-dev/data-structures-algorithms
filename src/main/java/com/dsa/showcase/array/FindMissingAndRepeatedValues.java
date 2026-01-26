@@ -29,26 +29,23 @@ public class FindMissingAndRepeatedValues {
         System.out.println("Repeated: " + result[0] + ", Missing: " + result[1]);
     }
     public int[] findMissingAndRepeatedValues(int[][] grid) {
-        int m = grid.length;
-        int n = grid[0].length;
-        int size = m*n;
-        long expectedSum = (long) ((size*(size+1))/2);
-        long expectedSqSum =  (long) ((size*(size+1)*(2L*size+1))/6);
-        long actualSum =0;
-        long actualSqSum=0;
-        for(int i =0 ;i< m;i++){
-            for(int j = 0; j< n;j++){
-                actualSum+=grid[i][j];
-                actualSqSum+=(long)(grid[i][j]*grid[i][j]);
+        long size = (long) grid.length * grid[0].length;
+        long expectedSum = (long)(size*(size+1))/2;
+        long expectedSqSum = (long)(size * (size+1)* (2*size+1))/6;
+        long actualSum = 0;
+        long actualSqSum = 0;
+        for(int [] g : grid){
+            for(int num : g){
+                actualSum+=num;
+                actualSqSum+=(long)(num*num);
             }
         }
-        // A is X-Y and B is X+Y
-        long A = actualSum - expectedSum;
+        long A = actualSum-expectedSum;
         long B = (actualSqSum-expectedSqSum)/A;
+        int repeated = (int)(A+B)/2;
+        int missing = (int)(repeated - A);
 
-        int repeating = (int)((A+B)/2);
-        int missing = (int)(repeating - A);
-         return new int []{repeating, missing};
+        return new int[] {repeated,missing};
 
     }
 }
