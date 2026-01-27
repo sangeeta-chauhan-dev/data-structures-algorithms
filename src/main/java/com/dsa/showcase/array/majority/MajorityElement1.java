@@ -40,6 +40,7 @@ class MajorityElement1 {
                 count++;
             } else if (count == 0) {
                 candidate = num;
+                count =1;
             } else {
                 count--;
             }
