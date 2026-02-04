@@ -56,6 +56,7 @@ class NextPermutation {
         int index = -1;
 
         // Step 1: find breakpoint
+        //Everything to the right of the pivot is decreasing.
         for (int i = n - 2; i >= 0; i--) {
             if (nums[i] < nums[i + 1]) {
                 index = i;
