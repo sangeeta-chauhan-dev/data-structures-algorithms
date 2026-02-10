@@ -1,4 +1,4 @@
-package sorting;
+package com.dsa.showcase.sorting;
 
 public class BubbleSort {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package sorting;
+package com.dsa.showcase.sorting;
 
 class SelectionSort {
     public static void main(String[] args) {

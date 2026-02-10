@@ -1,4 +1,4 @@
-package sorting;
+package com.dsa.showcase.sorting;
 /*Count Inversions
 Difficulty: MediumAccuracy: 16.93%Submissions: 741K+Points: 4
 Given an array of integers arr[]. You have to find the Inversion Count of the array.

@@ -1,4 +1,4 @@
-package sorting;
+package com.dsa.showcase.sorting;
 
 /*493. Reverse Pairs
 Solved
