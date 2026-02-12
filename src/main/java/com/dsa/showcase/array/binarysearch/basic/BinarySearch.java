@@ -1,4 +1,4 @@
-package com.dsa.showcase.array.binarysearch;
+package com.dsa.showcase.array.binarysearch.basic;
 
 /*704. Binary Search
 Solved

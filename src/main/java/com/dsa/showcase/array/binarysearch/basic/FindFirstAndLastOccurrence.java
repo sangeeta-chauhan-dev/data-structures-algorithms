@@ -1,4 +1,4 @@
-package com.dsa.showcase.array.binarysearch;
+package com.dsa.showcase.array.binarysearch.basic;
 /*34. Find First and Last Position of Element in Sorted Array
 Solved
         Medium
