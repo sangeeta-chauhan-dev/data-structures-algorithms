@@ -49,6 +49,8 @@ class FindFirstAndLastOcceranceUsingLowerBound {
         return new int[]{first, last};
     }
 
+    //time complexity O(logn)
+    //space complexity is O(1)
     int lowerBound(int[] arr, int target) {
         // code here
         int left = 0;
